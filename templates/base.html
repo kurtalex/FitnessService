@@ -11,6 +11,8 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
 
     <!--CUSTOM CSS-->
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
     {% block customcss %}{% endblock %}
 
     <!--PLUGINS CSS-->
@@ -51,7 +53,7 @@
                         <div class="header_content d-flex flex-row align-items-center justify-content-start trans_400">
                             <a href="{% url 'home' %}">
                                 <div class="logo d-flex flex-row align-items-center justify-content-start">
-                                    <img src="{% static 'images/dot.png' %}" alt=""><div>Sport<span>fit</span></div>
+                                    <img src="{% static 'images/FitRunTest3.png' %}" alt="">
                                 </div>
                             </a>
                             {% block bar %}
@@ -75,7 +77,7 @@
                             {% endblock %}
                             <div class="phone d-flex flex-row align-items-center justify-content-start ml-auto">
                                 <i class="fa fa-phone" aria-hidden="true"></i>
-                                <div>8(800) 555 35 35</div>
+                                <div>8 (800) 555 35 35</div>
                             </div>
                         </div>
                     </div>
@@ -111,7 +113,7 @@
         </div>
         <div class="menu_phone d-flex flex-row align-items-center justify-content-start">
             <i class="fa fa-phone" aria-hidden="true"></i>
-            <span>8(800) 555 35 35</span>
+            <span>8 (800) 555 35 35</span>
         </div>
     </div>
     <!--################################-->
@@ -132,10 +134,8 @@
                             <div class="footer_logo">
                                 <a href="{% url 'home' %}">
                                     <div class="logo d-flex flex-row align-items-center justify-content-center">
-                                        <img src="{% static 'images/dot.png' %}" alt="">
-                                        <div>
-                                            Sport<span>fit</span>
-                                        </div>
+                                        <img src="{% static 'images/FitRunTest3.png' %}" alt="">
+
                                     </div>
                                 </a>
                             </div>

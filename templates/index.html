@@ -14,6 +14,311 @@
 
 {% block content %}
     <div class="home">
-
+        <div class="background_image" style="background-image: url({% static 'images/index.jpg' %})"></div>
+        <div class="overlay"></div>
+        <div class="home_container">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="home_content text-center">
+{#                            <div class="video_link">#}
+{#                                <a class="vimeo video_button d-flex flex-column align-items-center justify-content-center" href="https://player.vimeo.com/video/99340873?autoplay=1&loop=1&title=0&autopause=0">#}
+{#                                    <div class="video_link_content d-flex flex-row align-items-center justify-content-start">#}
+{#                                        <div class="video_icon d-flex flex-column align-items-center justify-content-center">#}
+{#                                            <i class="fa fa-play" aria-hidden="true"></i>#}
+{#                                        </div>#}
+{#                                        <span class="video_text">See Workout Video</span>#}
+{#                                    </div>#}
+{#                                </a>#}
+{#                            </div>#}
+                            <div class="home_title">Построй свой идеал</div>
+                            <div class="home_subtitle">Пилатес, йога, фитнес, спиннинг и многое другое</div>
+                            <div class="button home_button ml-auto mr-auto">
+                                <a href="#">Присоединиться</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="boxes">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="boxes_container d-flex flex-lg-row flex-column align-items-start justify-content-start">
+                        <div class="box">
+                            <div class="box_icon d-flex flex-column align-items-center justify-content-center">
+                                <img src="{% static 'images/icon_1.png' %}" alt="">
+                            </div>
+                            <div class="box_title">Пилатес с тренером <br><br></div>
+                            <div class="box_text">
+                                <p>Краткое описание услуги, НЕ ЗАБЫТЬ ДОБАВИТЬ!!!</p>
+                            </div>
+                            <div class="box_link_container">
+                                <a href="#"><div class="box_link d-flex flex-column align-items-center justify-content-center trans_200"><div>+</div></div></a>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <div class="box_icon d-flex flex-column align-items-center justify-content-center">
+                                <img src="{% static 'images/icon_2.png' %}" alt="">
+                            </div>
+                            <div class="box_title">Занятия в басейне<br><br></div>
+                            <div class="box_text">
+                                <p>Какой-то текст о басейне в заведении, который позволит что-либо сделать...</p>
+                            </div>
+                            <div class="box_link_container">
+                                <a href="#"><div class="box_link d-flex flex-column align-items-center justify-content-center trans_200"><div>+</div></div></a>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <div class="box_icon d-flex flex-column align-items-center justify-content-center">
+                                <img src="{% static 'images/icon_3.png' %}" alt="">
+                            </div>
+                            <div class="box_title">План здорового питания</div>
+                            <div class="box_text">
+                                <p>Ещё больше текста про сооставление лпана здорового питания и т.д. и т.п.</p>
+                            </div>
+                            <div class="box_link_container">
+                            <a href="#"><div class="box_link d-flex flex-column align-items-center justify-content-center trans_200"><div>+</div></div></a>
+                        </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about">
+        <div class="container about_container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about_content">
+                        <div class="section_title_container">
+                            <div class="section_subtitle">Добро пожаловать в FitRun</div>
+                            <div class="section_title">О <span>FitRun</span></div>
+                        </div>
+                        <div class="text_highlight">Какая-то информация про компанию, чем занимается и так далее</div>
+                        <div class="about_text">
+                            <p>Дополнительная информация о фитнес центре которая более подробно описывает её</p>
+                        </div>
+                        <div class="button about_button"><a href="#">Присоединиться</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about_background">
+            <div class="container fill_height">
+                <div class="row fill_height">
+                    <div class="col-lg-6 offset-lg-6 fill_height">
+                        <div class="about_image"><img src="{% static 'images/a1.png' %}" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="testimonials">
+        <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/testimonials.jpg' %}" data-speed="0.8"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section_title_container">
+                        <div class="section_subtitle">FitRun</div>
+                        <div class="section_title">Отзывы о компании</div>
+                    </div>
+                    <div class="test test_1 d-flex flex-row align-items-start justify-content-start">
+                        <div><div class="test_image"><img src="{% static 'images/test_1.jpg' %}" alt=""></div></div>
+                        <div class="test_content">
+                            <div class="test_name">
+                                <a href="#">Диана Смит</a>
+                            </div>
+                        <div class="test_title">клиент</div>
+                        <div class="test_text">
+                            <p>Первый положительный отзыв о компании и её работе, пожелания и всё такое</p>
+                        </div>
+                        <div class="rating rating_4 test_rating"><i></i><i></i><i></i><i></i><i></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="test d-flex flex-row align-items-start justify-content-start">
+                        <div><div class="test_image"><img src="{% static 'images/test_2.jpg' %}" alt=""></div></div>
+                        <div class="test_content">
+                            <div class="test_name"><a href="#">Марк Сименс</a></div>
+                            <div class="test_title">клиент</div>
+                            <div class="test_text">
+                                <p>Второй отзыв про компанию, в которой описаны положительные качества и другое положительное...</p>
+                            </div>
+                            <div class="rating rating_4 test_rating"><i></i><i></i><i></i><i></i><i></i></div>
+                        </div>
+                    </div>
+                    <div class="test d-flex flex-row align-items-start justify-content-start">
+                        <div><div class="test_image"><img src="{% static 'images/test_3.jpg' %}" alt=""></div></div>
+                        <div class="test_content">
+                            <div class="test_name"><a href="#">Кэти Мирстен</a></div>
+                            <div class="test_title">клиент</div>
+                            <div class="test_text">
+                                <p>третий положительный отзыв, в котором тоже всё хорошо, всё отлично...</p>
+                            </div>
+                            <div class="rating rating_4 test_rating"><i></i><i></i><i></i><i></i><i></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row test_button_row">
+                <div class="col text-center">
+                    <div class="button test_button"><a href="#">Присоединиться</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="gallery_slider_container">
+            <div class="owl-carousel owl-theme gallery_slider">
+                <div class="owl-item"><img src="{% static 'images/gallery_3.jpg' %}" alt=""></div>
+                <div class="owl-item"><img src="{% static 'images/gallery_4.jpg' %}" alt=""></div>
+                <div class="owl-item"><img src="{% static 'images/gallery_5.jpg' %}" alt=""></div>
+                <div class="owl-item"><img src="{% static 'images/gallery_1.jpg' %}" alt=""></div>
+                <div class="owl-item"><img src="{% static 'images/gallery_2.jpg' %}" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <div class="services">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="section_title_container">
+                        <div class="section_subtitle">добро пожаловать в FitRun</div>
+                        <div class="section_title">Наши курсы</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row services_row">
+                <div class="col-xl-4 col-md-6 service_col">
+                    <div class="service">
+                        <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                            <div><div class="service_icon"><img src="{% static 'images/icon_4.png' %}" alt=""></div></div>
+                            <div class="service_title">Класс снижения веса</div>
+                        </div>
+                        <div class="service_text">
+                            <p>Краткое описание класса по снижению веса...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 service_col">
+                    <div class="service">
+                        <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                            <div><div class="service_icon"><img src="{% static 'images/icon_5.png' %}" alt=""></div></div>
+                            <div class="service_title">Класс йоги</div>
+                        </div>
+                        <div class="service_text">
+                            <p>описание класса йоги, что включается в этот класс...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 service_col">
+                    <div class="service">
+                        <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                            <div><div class="service_icon"><img src="{% static 'images/icon_6.png' %}" alt=""></div></div>
+                            <div class="service_title">Класс спиннинга</div>
+                        </div>
+                        <div class="service_text">
+                            <p>Описание класса спиннинга, что включается в этот класс...</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-xl-4 col-md-6 service_col">
+                    <div class="service">
+                        <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                            <div><div class="service_icon"><img src="{% static 'images/icon_7.png' %}" alt=""></div></div>
+                            <div class="service_title">Класс частных занятий фитнесом</div>
+                        </div>
+                        <div class="service_text">
+                            <p>Описание класса частного занятия фитнесом, что включается в этот класс...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 service_col">
+                    <div class="service">
+                        <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                            <div><div class="service_icon"><img src="{% static 'images/icon_8.png' %}" alt=""></div></div>
+                            <div class="service_title">Класс по питанию</div>
+                        </div>
+                        <div class="service_text">
+                            <p>Описание класса по питанию, что включается в этот класс...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 service_col">
+                    <div class="service">
+                        <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                            <div><div class="service_icon"><img src="{% static 'images/icon_9.png' %}" alt=""></div></div>
+                            <div class="service_title">Класс пилатеса</div>
+                        </div>
+                        <div class="service_text">
+                            <p>Описание класса пилатеса, что включается в этот класс...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blog">
+        <div class="blog_overlay"></div>
+        <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/blog.jpg' %}" data-speed="0.8"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex flex-row align-items-start justify-content-start">
+                        <div class="section_title_container">
+                            <div class="section_subtitle">добро пожаловать FitRun</div>
+                            <div class="section_title">Блог</div>
+                        </div>
+                        <div class="all_posts_link ml-auto"><a href="#">Открыть все публикации</a></div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row blog_row">
+                <div class="col-lg-4 blog_col">
+                    <div class="blog_post">
+                        <div class="blog_post_image"><img src="{% static 'images/blog_1.jpg' %}" alt=""></div>
+                        <div class="blog_post_title"><a href="#">Советы для построения идеального тела</a></div>
+                        <div class="blog_post_date"><a href="#">29 марта, 2020</a></div>
+                        <div class="blog_post_text">
+                            <p>Небольшое описание статьи...</p>
+                        </div>
+                        <div class="blog_post_link"><a href="#">Читать польностью...</a></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 blog_col">
+                    <div class="blog_post">
+                        <div class="blog_post_image"><img src="{% static 'images/blog_2.jpg' %}" alt=""></div>
+                        <div class="blog_post_title"><a href="#">Советы для построения идеального тела часть 2</a></div>
+                        <div class="blog_post_date"><a href="#">29 марта, 2020</a></div>
+                        <div class="blog_post_text">
+                            <p>Небольшое описание статьи...</p>
+                        </div>
+                        <div class="blog_post_link"><a href="#">Читать польностью...</a></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 blog_col">
+                    <div class="blog_post">
+                        <div class="blog_post_image"><img src="{% static 'images/blog_3.jpg' %}" alt=""></div>
+                        <div class="blog_post_title"><a href="#">Видео: Пилатес для начинающих</a></div>
+                        <div class="blog_post_date"><a href="#">29 марта, 2020</a></div>
+                        <div class="blog_post_text">
+                            <p>Небольшое описание статьи...</p>
+                        </div>
+                        <div class="blog_post_link"><a href="#">Читать польностью...</a></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 {% endblock %}
