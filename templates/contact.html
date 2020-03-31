@@ -1,7 +1,93 @@
 {% extends 'base.html' %}
-
-{% block title %}Contact{% endblock %}
+{% load static %}
+{% block title %}Fitrun|Contacts{% endblock %}
+{% block customcss %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/contact_responsive.css' %}">
+{% endblock %}
+{% block script %}
+    <script src="{% static 'js/contact.js' %}"></script>
+    <script src="{% static 'js/google_maps.js' %}"></script>
+{% endblock %}
 
 {% block content %}
-    CONTACT
+    <div class="home">
+        <div class="background_image" style="background-image:url({% static 'images/contact.jpg' %})"></div>
+        <div class="overlay"></div>
+        <div class="home_container">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="home_content">
+                            <div class="home_title">Контакты</div>
+                            <div class="home_subtitle">Пилатес, йога, фитнес, спиннинг и многое другое</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="contact_content">
+                        <div class="contact_logo">
+                            <div class="logo d-flex flex-row align-items-center justify-content-start"><img src="{% static 'images/FitRunTest3.png' %}" alt=""><div><span>FITRUN</span></div></div>
+                            
+                        </div>
+                        <div class="contact_text">
+                            <p>Пусть будет какое-то описание, так сказать преамбула контактов...</p>
+                        </div>
+                        <div class="contact_list">
+                            <ul>
+                                <li class="d-flex flex-row align-items-start justify-content-start">
+                                    <div><div>A:</div></div>
+                                    <div>1481 Creekside Lane Avila Beach, CA 931</div>
+                                </li>
+                                <li class="d-flex flex-row align-items-start justify-content-start">
+                                    <div><div>P:</div></div>
+                                    <div>8 (800) 555 35 35</div>
+                                </li>
+                                <li class="d-flex flex-row align-items-start justify-content-start">
+                                    <div><div>M:</div></div>
+                                    <div><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b4cddbc1c6d9d5ddd8f4d3d9d5ddd89ad7dbd9">office@fitrun.com</a></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 contact_col">
+                    <div class="contact_title">Обратная связь</div>
+                    <div class="contact_form_container">
+                        <form action="#" id="contact_form" class="contact_form">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="input_item"><input type="text" class="contact_input trans_200" placeholder="Имя" required="required"></div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="input_item"><input type="email" class="contact_input trans_200" placeholder="E-mail" required="required"></div>
+                                </div>
+                            </div>
+                            <div class="input_item"><textarea class="contact_input contact_textarea trans_200" placeholder="Сообщение" required="required"></textarea></div>
+                            <button class="contact_button button">Отправить<span></span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row google_map_row">
+                <div class="col">
+                    <div class="contact_map">
+                        <div class="map">
+                            <div id="google_map" class="google_map">
+                                <div class="map_container">
+                                    <div id="map"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
