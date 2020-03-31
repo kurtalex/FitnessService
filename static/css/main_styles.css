@@ -5,48 +5,25 @@
 
 [Table of Contents]
 
-1. Fonts
-2. Body and some general stuff
-3. Header
-4. Menu
-5. Home
-6. Boxes
-7. About
-8. Testimonials
-9. Gallery
-10. Services
-11. Blog
-12. Footer-
+1. Home
+2. Boxes
+3. About
+4. Testimonials
+5. Gallery
+6. Services
+7. Blog
 
 
 ******************************/
 
-
-
 /*********************************
-2. Body and some general stuff
-*********************************/
-
-
-
-/*********************************
-3. Header
-*********************************/
-
-
-
-/*********************************
-4. Menu
-*********************************/
-
-/*********************************
-5. Home
+1. Home
 *********************************/
 
 .home
 {
 	width: 100%;
-	height: 120vh;
+	height: 100vh;
 	overflow: hidden;
 }
 .overlay
@@ -112,7 +89,7 @@
 	font-weight: 200;
 	color: #fff;
 	line-height: 1.2;
-	margin-top: -9px;
+	margin-top: -7%;
 }
 .home_subtitle
 {
@@ -123,7 +100,7 @@
 }
 .home_button
 {
-	border: solid 1px #FFFFFF;
+	border: solid 1px #ff9711;
 	margin-top: 44px;
 }
 .home_button a
@@ -132,13 +109,13 @@
 }
 
 /*********************************
-6. Boxes
+2. Boxes
 *********************************/
 
 .boxes
 {
 	z-index: 1;
-	margin-top: -270px;
+	margin-top: -270px; /*-270px*/
 }
 .box
 {
@@ -222,12 +199,12 @@
 }
 
 /*********************************
-7. About
+3. About
 *********************************/
 
 .about
 {
-	padding-top: 94px;
+	padding-top: 160px;
 	 background: #FFFFFF;
 }
 .about_container
@@ -314,7 +291,7 @@
 }
 
 /*********************************
-8. Testimonials
+3. Testimonials
 *********************************/
 
 .testimonials
@@ -397,7 +374,7 @@
 }
 
 /*********************************
-9. Gallery
+4. Gallery
 *********************************/
 
 .gallery
@@ -440,7 +417,7 @@
 }
 
 /*********************************
-10. Services
+5. Services
 *********************************/
 
 .services
@@ -479,7 +456,7 @@
 }
 
 /*********************************
-11. Blog
+5. Blog
 *********************************/
 
 .blog
@@ -581,7 +558,3 @@
 	font-weight: 400;
 	color: #ff9711;
 }
-
-/*********************************
-12. Footer
-*********************************/
