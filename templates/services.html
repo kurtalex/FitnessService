@@ -1,7 +1,13 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}Service&classes{% endblock %}
-
+{% block customcss %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/services.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/services_responsive.css' %}">
+{% endblock %}
+{% block script %}
+    <script src="{% static 'js/services.js' %}"></script>
+{% endblock %}
 {% block content %}
-    SERVICES
+    
 {% endblock %}

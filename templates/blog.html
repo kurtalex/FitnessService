@@ -1,7 +1,150 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block title %}Fitrun|Blog{% endblock %}
+{% block customcss %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/blog_responsive.css' %}">
+{% endblock %}
 
-{% block title %}Blog{% endblock %}
+{% block script %}
+    <script src="{% static 'js/blog.js' %}"></script>
+{% endblock %}
 
 {% block content %}
-    BLOG
+    <div class="home">
+        <div class="background_image" style="background-image:url({% static 'images/blog_page.jpg' %})"></div>
+        <div class="overlay"></div>
+        <div class="home_container">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="home_content">
+                            <div class="home_title">Блог</div>
+                            <div class="home_subtitle">Пилатес, йога, фитнес, спиннинг, и многое другое</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="blog">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="section_title_container">
+                        <div class="section_subtitle">фитнес центр FITRUN</div>
+                        <div class="section_title">Блог</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row blog_row">
+                <div class="col-xl-4 col-md-6 blog_col">
+                    <div class="blog_post">
+                        <div class="blog_post_image"><img src="{% static 'images/blog_4.jpg' %}" alt=""></div>
+                        <div class="blog_post_title"><a href="#">Советы для построения идеального тела</a></div>
+                        <div class="blog_post_date"><a href="#">29 марта, 2020</a></div>
+                        <div class="blog_post_text">
+                            <p>Небольшое описание статьи...</p>
+                        </div>
+                        <div class="blog_post_link"><a href="#">Читать польностью...</a></div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 blog_col">
+                    <div class="blog_post">
+                        <div class="blog_post_image"><img src="{% static 'images/blog_5.jpg' %}" alt=""></div>
+                        <div class="blog_post_title"><a href="#">Советы для построения идеального тела часть 2</a></div>
+                        <div class="blog_post_date"><a href="#">29 марта, 2020</a></div>
+                        <div class="blog_post_text">
+                            <p>Небольшое описание статьи...</p>
+                        </div>
+                        <div class="blog_post_link"><a href="#">Читать польностью...</a></div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 blog_col">
+                    <div class="blog_post">
+                        <div class="blog_post_image"><img src="{% static 'images/blog_6.jpg' %}" alt=""></div>
+                        <div class="blog_post_title"><a href="#">Видео: Пилатес для начинающих</a></div>
+                        <div class="blog_post_date"><a href="#">29 марта, 2020</a></div>
+                        <div class="blog_post_text">
+                            <p>Небольшое описание статьи...</p>
+                        </div>
+                        <div class="blog_post_link"><a href="#">Читать польностью...</a></div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 blog_col">
+                    <div class="blog_post">
+                        <div class="blog_post_image"><img src="{% static 'images/blog_7.jpg' %}" alt=""></div>
+                        <div class="blog_post_title"><a href="#">Питание летом</a></div>
+                        <div class="blog_post_date"><a href="#">29 марта, 2020</a></div>
+                        <div class="blog_post_text">
+                            <p>Небольшое описание статьи...</p>
+                        </div>
+                        <div class="blog_post_link"><a href="#">Читать польностью...</a></div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-md-6 blog_col">
+                    <div class="blog_post">
+                        <div class="blog_post_image"><img src="{% static 'images/blog_8.jpg' %}" alt=""></div>
+                        <div class="blog_post_title"><a href="#">Упражнения для шеи</a></div>
+                        <div class="blog_post_date"><a href="#">29 марта, 2020</a></div>
+                        <div class="blog_post_text">
+                            <p>Небольшое описание статьи...</p>
+                        </div>
+                        <div class="blog_post_link"><a href="#">Читать польностью...</a></div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 blog_col">
+                    <div class="blog_post">
+                        <div class="blog_post_image"><img src="{% static 'images/blog_9.jpg' %}" alt=""></div>
+                        <div class="blog_post_title"><a href="#">Советы по силовым тренировкам</a></div>
+                        <div class="blog_post_date"><a href="#">29 марта, 2020</a></div>
+                        <div class="blog_post_text">
+                            <p>Небольшое описание статьи...</p>
+                        </div>
+                        <div class="blog_post_link"><a href="#">Читать польностью...</a></div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 blog_col">
+                    <div class="blog_post">
+                        <div class="blog_post_image"><img src="{% static 'images/blog_10.jpg' %}" alt=""></div>
+                        <div class="blog_post_title"><a href="#">Занятия йогой</a></div>
+                        <div class="blog_post_date"><a href="#">29 марта, 2020</a></div>
+                        <div class="blog_post_text">
+                            <p>Небольшое описание статьи...</p>
+                        </div>
+                        <div class="blog_post_link"><a href="#">Читать польностью...</a></div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 blog_col">
+                    <div class="blog_post">
+                        <div class="blog_post_image"><img src="{% static 'images/blog_11.jpg' %}" alt=""></div>
+                        <div class="blog_post_title"><a href="#">Идеальное тело</a></div>
+                        <div class="blog_post_date"><a href="#">29 марта, 2020</a></div>
+                        <div class="blog_post_text">
+                            <p>Небольшое описание статьи...</p>
+                        </div>
+                        <div class="blog_post_link"><a href="#">Читать польностью...</a></div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 blog_col">
+                    <div class="blog_post">
+                        <div class="blog_post_image"><img src="{% static 'images/blog_12.jpg' %}" alt=""></div>
+                        <div class="blog_post_title"><a href="#">Видео: Пилатес для начинающих</a></div>
+                        <div class="blog_post_date"><a href="#">29 марта, 2020</a></div>
+                        <div class="blog_post_text">
+                            <p>Небольшое описание статьи...</p>
+                        </div>
+                        <div class="blog_post_link"><a href="#">Читать польностью...</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="button blog_button ml-auto mr-auto"><a href="#">Больше статей</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
