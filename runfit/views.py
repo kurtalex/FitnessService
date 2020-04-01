@@ -19,3 +19,7 @@ def contact(request):
 
 def service(request):
     return render(request, 'services.html')
+
+
+def not_found(request):
+    return render(request, '404.html')

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Fitrun|404{% endblock %}
+{% block customcss %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style_404.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/google_Kanit_font.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="home">
+{#        <div class="background_image" style="background-image:url({% static 'images/index.jpg' %})"></div>#}
+        <div class="overlay"></div>
+        <div class="home_container">
+            <div class="row">
+                <div class="col">
+                    <div class="home_content text-center">
+                        <div id="notfound" class="text-center">
+                            <div class="notfound">
+                                <div class="notfound-404">
+                                    <div class="home_title">
+                                        <h1>404</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <h2 id="404">Упс! Ничего не найдено</h2>
+                            <p>Страница которую Вы ищете в данный момент недоступна, зайдите позже <a href="/">Вернуться на главную</a></p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
