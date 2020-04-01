@@ -29,4 +29,5 @@ urlpatterns = [
                   path('contact/', views.contact, name='contact'),
                   path('404/', views.not_found, name='page-not-found')
 
-              ] + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)
+              ] + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS) \
+                + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
