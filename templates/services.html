@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Service&classes{% endblock %}
+{% block title %}Fitrun|Service&classes{% endblock %}
 {% block customcss %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/services.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/services_responsive.css' %}">
@@ -9,5 +9,357 @@
     <script src="{% static 'js/services.js' %}"></script>
 {% endblock %}
 {% block content %}
-    
+    <div class="home">
+        <div class="background_image" style="background-image:url({% static 'images/services.jpg' %})"></div>
+        <div class="overlay"></div>
+        <div class="home_container">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="home_content">
+                            <div class="home_title">Услуги</div>
+                            <div class="home_subtitle">Пилатес, йога, фитнес, спиннинг и многое другое</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="services">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="section_title_container">
+                        <div class="section_subtitle">добро пожаловать FITRUN</div>
+                        <div class="section_title">Наши занятия</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row services_row">
+                <div class="col-xl-4 col-md-6 service_col">
+                    <div class="service">
+                        <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                            <div>
+                                <div class="service_icon"><img src="{% static 'images/icon_4.png' %}" alt=""></div>
+                            </div>
+                            <div class="service_title">Занятия по жиросжиганию</div>
+                        </div>
+                        <div class="service_text">
+                            <p>Описание занятий по жиросжиганию...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 service_col">
+                    <div class="service">
+                        <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                            <div>
+                                <div class="service_icon"><img src="{% static 'images/icon_5.png' %}" alt=""></div>
+                            </div>
+                            <div class="service_title">Занятия йогой</div>
+                        </div>
+                        <div class="service_text">
+                            <p>Описание занятий ...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 service_col">
+                    <div class="service">
+                        <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                            <div>
+                                <div class="service_icon"><img src="{% static 'images/icon_6.png' %}" alt=""></div>
+                            </div>
+                            <div class="service_title">Занятия спиннинг</div>
+                        </div>
+                        <div class="service_text">
+                            <p>Описание занятий по ...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 service_col">
+                    <div class="service">
+                        <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                            <div>
+                                <div class="service_icon"><img src="{% static 'images/icon_7.png' %}" alt=""></div>
+                            </div>
+                            <div class="service_title">Занятия с персональным тренером</div>
+                        </div>
+                        <div class="service_text">
+                            <p>Описание занятий по ...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 service_col">
+                    <div class="service">
+                        <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                            <div>
+                                <div class="service_icon"><img src="{% static 'images/icon_8.png' %}" alt=""></div>
+                            </div>
+                            <div class="service_title">Занятия по правильному питанию</div>
+                        </div>
+                        <div class="service_text">
+                            <p>Описание занятий по ...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 service_col">
+                    <div class="service">
+                        <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                            <div>
+                                <div class="service_icon"><img src="{% static 'images/icon_9.png' %}" alt=""></div>
+                            </div>
+                            <div class="service_title">Занятия пилатесом</div>
+                        </div>
+                        <div class="service_text">
+                            <p>Описание занятий по ...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="timetable">
+        <div class="parallax_background parallax-window" data-parallax="scroll"
+             data-image-src="{% static 'images/timetable.jpg' %}" data-speed="0.8"></div>
+        <div class="tt_overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="section_title_container">
+                        <div class="section_subtitle">добро пожаловать FITRUN</div>
+                        <div class="section_title">Рассписание занятий</div>
+                    </div>
+                    <div class="timetable_filtering">
+                        <ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
+                            <li class="active item_filter_btn" data-filter="*">Все занятия</li>
+                            <li class="item_filter_btn" data-filter=".weight_loss">Жиросжигание</li>
+                            <li class="item_filter_btn" data-filter=".aerobics">Аэробика</li>
+                            <li class="item_filter_btn" data-filter=".crossfit">Кроссфит</li>
+                            <li class="item_filter_btn" data-filter=".fitness">Фитнес</li>
+                            <li class="item_filter_btn" data-filter=".yoga">Йога</li>
+                            <li class="item_filter_btn" data-filter=".pilates">Пилатес</li>
+                            <li class="item_filter_btn" data-filter=".stretching">Гимнастика</li>
+                        </ul>
+                    </div>
+
+                    <div class="timetable_container d-flex flex-sm-row flex-column align-items-start justify-content-sm-between justify-content-start">
+
+                        <div class="tt_day">
+                            <div class="tt_title">Понедельник</div>
+                            <div class="tt_day_content grid">
+
+                                <div class="tt_class grid-item weight_loss">
+                                    <div class="tt_class_title">Жиросжигание</div>
+                                    <div class="tt_class_instructor">Джесика Смит</div>
+                                    <div class="tt_class_time">9:00</div>
+                                </div>
+
+                                <div class="tt_class grid-item aerobics">
+                                    <div class="tt_class_title">Аэробика</div>
+                                    <div class="tt_class_instructor">Джесика Смит</div>
+                                    <div class="tt_class_time">10:00</div>
+                                </div>
+
+                                <div class="tt_class empty grid-item">
+                                </div>
+
+                                <div class="tt_class grid-item aerobics">
+                                    <div class="tt_class_title">Аэробика</div>
+                                    <div class="tt_class_instructor">Джесика Смит</div>
+                                    <div class="tt_class_time">13:00</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tt_day">
+                            <div class="tt_title">Вторник</div>
+                            <div class="tt_day_content grid">
+
+                                <div class="tt_class grid-item weight_loss">
+                                    <div class="tt_class_title">Жиросжигание</div>
+                                    <div class="tt_class_instructor">Джесика Смит</div>
+                                    <div class="tt_class_time">8:00</div>
+                                </div>
+
+                                <div class="tt_class empty grid-item">
+                                </div>
+
+                                <div class="tt_class grid-item aerobics">
+                                    <div class="tt_class_title">Аэробика</div>
+                                    <div class="tt_class_instructor">Джесика Смит</div>
+                                    <div class="tt_class_time">12:00</div>
+                                </div>
+
+                                <div class="tt_class grid-item aerobics">
+                                    <div class="tt_class_title">Аэробика</div>
+                                    <div class="tt_class_instructor">Джесика Смит</div>
+                                    <div class="tt_class_time">13:00</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tt_day">
+                            <div class="tt_title">Среда</div>
+                            <div class="tt_day_content grid">
+
+                                <div class="tt_class grid-item crossfit">
+                                    <div class="tt_class_title">Кроссфит</div>
+                                    <div class="tt_class_instructor">Джесика Смит</div>
+                                    <div class="tt_class_time">9:00</div>
+                                </div>
+
+                                <div class="tt_class grid-item aerobics">
+                                    <div class="tt_class_title">Аэробика</div>
+                                    <div class="tt_class_instructor">Джесика Смит</div>
+                                    <div class="tt_class_time">10:00</div>
+                                </div>
+
+                                <div class="tt_class empty grid-item">
+                                </div>
+
+                                <div class="tt_class grid-item aerobics">
+                                    <div class="tt_class_title">Аэробика</div>
+                                    <div class="tt_class_instructor">Джесика Смит</div>
+                                    <div class="tt_class_time">13:00</div>
+                                </div>
+
+                                <div class="tt_class grid-item aerobics">
+                                    <div class="tt_class_title">Аэробика</div>
+                                    <div class="tt_class_instructor">Джесика Смит</div>
+                                    <div class="tt_class_time">17:00</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tt_day">
+                            <div class="tt_title">Четверг</div>
+                            <div class="tt_day_content grid">
+
+                                <div class="tt_class grid-item fitness">
+                                    <div class="tt_class_title">Фитнес</div>
+                                    <div class="tt_class_instructor">Джесика Смит</div>
+                                    <div class="tt_class_time">9:00</div>
+                                </div>
+
+                                <div class="tt_class grid-item aerobics">
+                                    <div class="tt_class_title">Аэробика</div>
+                                    <div class="tt_class_instructor">Джесика Смит</div>
+                                    <div class="tt_class_time">10:00</div>
+                                </div>
+
+                                <div class="tt_class grid-item yoga">
+                                    <div class="tt_class_title">Йога</div>
+                                    <div class="tt_class_instructor">Джесика Смит</div>
+                                    <div class="tt_class_time">12:00</div>
+                                </div>
+
+                                <div class="tt_class grid-item pilates">
+                                    <div class="tt_class_title">Пилатес</div>
+                                    <div class="tt_class_instructor">Джесика Смит</div>
+                                    <div class="tt_class_time">13:00</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tt_day">
+                            <div class="tt_title">Пятница</div>
+                            <div class="tt_day_content grid">
+
+                                <div class="tt_class grid-item yoga">
+                                    <div class="tt_class_title">Йога</div>
+                                    <div class="tt_class_instructor">Джесика Смит</div>
+                                    <div class="tt_class_time">9:00</div>
+                                </div>
+
+                                <div class="tt_class grid-item aerobics">
+                                    <div class="tt_class_title">Аэробика</div>
+                                    <div class="tt_class_instructor">Джесика Смит</div>
+                                    <div class="tt_class_time">10:00</div>
+                                </div>
+
+                                <div class="tt_class empty grid-item">
+                                </div>
+
+                                <div class="tt_class grid-item aerobics">
+                                    <div class="tt_class_title">Аэробика</div>
+                                    <div class="tt_class_instructor">Джесика Смит</div>
+                                    <div class="tt_class_time">13:00</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tt_day">
+                            <div class="tt_title">Суббота</div>
+                            <div class="tt_day_content grid">
+
+                                <div class="tt_class grid-item weight_loss">
+                                    <div class="tt_class_title">Жиросжигание</div>
+                                    <div class="tt_class_instructor">Джесика Смит</div>
+                                    <div class="tt_class_time">9:00</div>
+                                </div>
+
+                                <div class="tt_class grid-item pilates">
+                                    <div class="tt_class_title">Пилатес</div>
+                                    <div class="tt_class_instructor">Джесика Смит</div>
+                                    <div class="tt_class_time">10:00</div>
+                                </div>
+
+                                <div class="tt_class empty grid-item">
+                                </div>
+
+                                <div class="tt_class grid-item aerobics">
+                                    <div class="tt_class_title">Аэробика</div>
+                                    <div class="tt_class_instructor">Джесика Смит</div>
+                                    <div class="tt_class_time">13:00</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tt_day">
+                            <div class="tt_title">Воскресенье</div>
+                            <div class="tt_day_content grid">
+
+                                <div class="tt_class grid-item stretching">
+                                    <div class="tt_class_title">Гимнастика</div>
+                                    <div class="tt_class_instructor">Джесика Смит</div>
+                                    <div class="tt_class_time">9:00</div>
+                                </div>
+
+                                <div class="tt_class grid-item aerobics">
+                                    <div class="tt_class_title">Аэробика</div>
+                                    <div class="tt_class_instructor">Джесика Смит</div>
+                                    <div class="tt_class_time">10:00</div>
+                                </div>
+
+                                <div class="tt_class empty grid-item">
+                                </div>
+
+                                <div class="tt_class empty grid-item">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="extra d-flex flex-column align-items-center justify-content-center text-center">
+        <div class="background_image" style="background-image:url({% static 'images/extra_wide.jpg' %})"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="extra_content d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="extra_title">Скидка 15%</div>
+                        <div class="extra_text">
+                            <p>Описание на что скидка и т.д. ...</p>
+                        </div>
+                        <div class="button extra_button"><a href="#">Присоединитья</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}
