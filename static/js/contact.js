@@ -5,10 +5,7 @@
 [Table of Contents]
 
 1. Vars and Inits
-2. Set Header
-3. Init Menu
-4. Init Google Map
-
+2. Init Google Map
 
 ******************************/
 
@@ -22,69 +19,9 @@ $(document).ready(function()
 
 	*/
 
-	var header = $('.header');
-	var hamburgerBar = $('.hamburger_bar');
-	var hamburger = $('.hamburger');
-	var map;
+	let map;
 
-	setHeader();
-
-	$(window).on('resize', function()
-	{
-		setHeader();
-
-		setTimeout(function()
-		{
-			$(window).trigger('resize.px.parallax');
-		}, 375);
-	});
-
-	$(document).on('scroll', function()
-	{
-		setHeader();
-	});
-
-	initMenu();
 	initGoogleMap();
-
-	/* 
-
-	2. Set Header
-
-	*/
-
-	function setHeader()
-	{
-		if($(window).scrollTop() > 91)
-		{
-			header.addClass('scrolled');
-			hamburgerBar.addClass('scrolled');
-		}
-		else
-		{
-			header.removeClass('scrolled');
-			hamburgerBar.removeClass('scrolled');
-		}
-	}
-
-	/* 
-
-	3. Init Menu
-
-	*/
-
-	function initMenu()
-	{
-		if($('.menu').length)
-		{
-			var menu = $('.menu');
-			hamburger.on('click', function()
-			{
-				hamburger.toggleClass('active');
-				menu.toggleClass('active');
-			});
-		}
-	}
 
 	/* 
 
@@ -94,8 +31,8 @@ $(document).ready(function()
 
 	function initGoogleMap()
 	{
-		var myLatlng = new google.maps.LatLng(34.063685,-118.272936);
-    	var mapOptions = 
+		let myLatlng = new google.maps.LatLng(34.063685,-118.272936);
+    	let mapOptions =
     	{
     		center: myLatlng,
 	       	zoom: 14,
@@ -124,7 +61,7 @@ $(document).ready(function()
 			    ]
 			  }
 			]
-    	}
+    	};
 
     	// Initialize a map with options
     	map = new google.maps.Map(document.getElementById('map'), mapOptions);
