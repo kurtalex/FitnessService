@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block title %}Fitrun|SignUp{% endblock %}
+{% block content %}
+    <div class="home">
+        <div class="overlay">
+            <div class="home_container">
+                <div class="row">
+                    <div class="col">
+                        <div class="home_content text-center">
+                            <form method="POST" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                {% bootstrap_form user_form %}
+                                {% bootstrap_form person_form %}
+                                <button type="submit" class="btn home_button pull-right">Зарегистрироваться</button>
+                            </form>
+                            <a href="{% url 'sign-in' %}">Уже есть аккаунт?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

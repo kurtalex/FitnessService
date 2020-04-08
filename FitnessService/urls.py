@@ -16,6 +16,7 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
+from django.contrib.auth import views as auth_views
 from runfit import views
 from django.conf import settings
 from django.conf.urls.static import static
@@ -27,7 +28,11 @@ urlpatterns = [
                   path('services/', views.service, name='services'),
                   path('blog/', views.blog, name='blog'),
                   path('contact/', views.contact, name='contact'),
-                  path('404/', views.not_found, name='page-not-found')
+                  path('404/', views.not_found, name='page-not-found'),
+
+                  path('sign-in/', auth_views.LoginView.as_view(template_name='sign_in.html'), name='sign-in'),
+                  path('sign-out/', auth_views.LogoutView.as_view(next_page='/'), name='sign-out'),
+                  path('sign-up/', views.sign_up, name='sign-up')
 
               ] + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS) \
-                + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+              + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
