@@ -3,23 +3,24 @@
 
 {% block title %}Fitrun|SignUp{% endblock %}
 {% block content %}
-    <div class="home">
-        <div class="overlay">
-            <div class="home_container">
+    <div class="sign_up">
+            <div class="sign_up_container">
                 <div class="row">
-                    <div class="col">
-                        <div class="home_content text-center">
-                            <form method="POST" enctype="multipart/form-data">
-                                {% csrf_token %}
-                                {% bootstrap_form user_form %}
-                                {% bootstrap_form person_form %}
-                                <button type="submit" class="btn home_button pull-right">Зарегистрироваться</button>
-                            </form>
-                            <a href="{% url 'sign-in' %}">Уже есть аккаунт?</a>
+                    <div class="col-lg-6 offset-lg-3 col-md-6 offset-md-3">
+                        <div class="card mb-3 card-body">
+                            <div class="card-body">
+                                <h3 class="text-center text-uppercase"><b>Регистрация аккаунта</b></h3>
+                                <form method="POST" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                    {% bootstrap_form user_form %}
+                                    {% bootstrap_form person_form %}
+                                    <button type="submit" class="btn sign_button pull-right">Зарегистрироваться</button>
+                                </form>
+                                <a href="{% url 'sign-in' %}">Уже есть аккаунт?</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </div>
 {% endblock %}
