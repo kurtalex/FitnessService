@@ -29,8 +29,10 @@ urlpatterns = [
                   path('blog/', views.blog, name='blog'),
                   path('contact/', views.contact, name='contact'),
                   path('404/', views.not_found, name='page-not-found'),
+                  path('order/', views.order, name='order'),
 
-                  path('sign-in/', auth_views.LoginView.as_view(template_name='sign_in.html'), name='sign-in'),
+                  path('sign-in/', auth_views.LoginView.as_view(template_name='sign_in.html'),
+                       name='sign-in'),
                   path('sign-out/', auth_views.LogoutView.as_view(next_page='/'), name='sign-out'),
                   path('sign-up/', views.sign_up, name='sign-up')
 

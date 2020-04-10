@@ -8,7 +8,7 @@ class Coach(models.Model):
     name = models.CharField(max_length=200)
     phone = models.CharField(max_length=200)
     desc = models.CharField(max_length=500)
-    avatar = models.ImageField(upload_to="coach_avatars/", blank=False)
+    avatar = models.ImageField(upload_to="coach_avatars/", blank=True)
 
     def __str__(self):
         return self.user.get_full_name()
@@ -18,7 +18,7 @@ class Person(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, verbose_name="Пользователь", related_name="person")
     # name = models.CharField(max_length=200)
     phone = models.CharField(max_length=200)
-    avatar = models.ImageField(upload_to="person_avatars/", blank=False)
+    avatar = models.ImageField(upload_to="person_avatars/", blank=True)
 
     def __str__(self):
         return self.user.get_full_name()
@@ -35,30 +35,10 @@ class TypeOfTraining(models.Model):
 
 
 class Order(models.Model):
-    FITNESS = 1
-    AEROBICS = 2
-    GYMNASTICS = 3
-    PILATES = 4
-    WEIGHT_LOSS = 5
-    YOGA = 6
-    CROSSFIT = 7
-    SPINNING = 8
-
-    TYPE_OF_TRAINING_CHOICES = (
-        (FITNESS, "Фитнес"),
-        (AEROBICS, "Аэробика"),
-        (GYMNASTICS, "Гимнастика"),
-        (PILATES, "Пилатес"),
-        (WEIGHT_LOSS, "Жиросжигание"),
-        (YOGA, "Йога"),
-        (CROSSFIT, "Кроссфит"),
-        (SPINNING, "Спиннинг")
-    )
-
     person = models.ForeignKey(Person, on_delete=models.CASCADE)
     coach = models.ForeignKey(Coach, on_delete=models.CASCADE)
+    pick_training = models.ForeignKey(TypeOfTraining, on_delete=models.CASCADE)
     total = models.IntegerField()
-    pick_training = models.IntegerField(choices=TYPE_OF_TRAINING_CHOICES)
     created_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):

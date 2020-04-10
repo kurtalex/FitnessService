@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Fitrun|Service&classes{% endblock %}
+{% block title %}Услуги|Fitrun{% endblock %}
 {% block customcss %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/services.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/services_responsive.css' %}">
@@ -355,7 +355,7 @@
                         <div class="extra_text">
                             <p>Описание на что скидка и т.д. ...</p>
                         </div>
-                        <div class="button extra_button"><a href="#">Присоединитья</a></div>
+                        <div class="button extra_button"><a href="{% url 'order' %}">Присоединитья</a></div>
                     </div>
                 </div>
             </div>

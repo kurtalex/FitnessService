@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Fitrun|About Us{% endblock %}
+{% block title %}О нас|Fitrun{% endblock %}
 {% block customcss %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/about_responsive.css' %}">
@@ -39,7 +39,7 @@
                     <div class="about_text">
                         <p>Дополнительное более расширенное описание компании..., можно более подробно описать занятия и тому подобное...</p>
                     </div>
-                    <div class="button about_button"><a href="#">Присоединиться</a></div>
+                    <div class="button about_button"><a href="{% url 'order' %}">Присоединиться</a></div>
                 </div>
             </div>
         </div>
@@ -101,7 +101,7 @@
                         <div class="extra_text">
                             <p>Краткое описание на какие занятия скидки...</p>
                         </div>
-                        <div class="button extra_button"><a href="#">Присоединиться</a></div>
+                        <div class="button extra_button"><a href="{% url 'order' %}">Присоединиться</a></div>
                     </div>
                 </div>
                 <div class="col-lg-6 skills_col">

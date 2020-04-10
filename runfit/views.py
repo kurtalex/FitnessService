@@ -54,3 +54,8 @@ def sign_up(request):
         "user_form": user_form,
         "person_form": person_form
     })
+
+
+@login_required(login_url='/sign-in/')
+def order(request):
+    return render(request, 'order.html')

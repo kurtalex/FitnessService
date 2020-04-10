@@ -64,22 +64,32 @@
                                 {% url 'services' as services_url %}
                                 {% url 'blog' as blog_url %}
                                 {% url 'contact' as contact_url %}
+                                {% url 'sign-in' as sign_in_url %}
 
 
                             <nav class="main_nav">
-                                <ul class="d-flex flex-row align-items-center justify-content-start">
+                                <ul class="d-flex flex-row align-items-center justify-content-md-center">
                                     <li class="{% if request.path == home_url %}active{% endif %}"><a href="{% url 'home' %}">Главная</a></li>
                                     <li class="{% if request.path == about_url %}active{% endif %}"><a href="{% url 'about-us' %}">О нас</a></li>
                                     <li class="{% if request.path == services_url %}active{% endif %}"><a href="{% url 'services' %}">Услуги</a></li>
                                     <li class="{% if request.path == blog_url %}active{% endif %}"><a href="{% url 'blog' %}">Блог</a></li>
                                     <li class="{% if request.path == contact_url %}active{% endif %}"><a href="{% url 'contact' %}">Контакты</a></li>
+
+                                    {% if user.is_authenticated %}
+                                        <li>{{ request.user.get_full_name }}</li>
+                                        <li><a href="{% url 'sign-out' %}?next={{ request.path }}">Выйти</a></li>
+                                    {% else %}
+                                        <li class="{% if request.path == sign_in_url %}active{% endif %}"><a href="{% url 'sign-in' %}">Войти</a></li>
+                                    {% endif %}
                                 </ul>
                             </nav>
+
                             {% endblock %}
-                            <div class="phone d-flex flex-row align-items-center justify-content-start ml-auto">
-                                <i class="fa fa-phone" aria-hidden="true"></i>
-                                <div>8 (800) 555 35 35</div>
-                            </div>
+{#                            <div class="phone d-flex flex-row align-items-center justify-content-start ">#}
+{#                                <i class="fa fa-phone" aria-hidden="true"></i>#}
+{#                                <div>8 (800) 555 35 35</div>#}
+{#                            </div>#}
+
                         </div>
                     </div>
                 </div>
@@ -110,6 +120,12 @@
                 <li><a href="{% url 'services' %}">Услуги</a></li>
                 <li><a href="{% url 'blog' %}">Блог</a></li>
                 <li><a href="{% url 'contact' %}">Контакты</a></li>
+                {% if user.is_authenticated %}
+                    <li>{{ request.user.get_full_name }}</li>
+                    <li><a href="{% url 'sign-out' %}?next={{ request.path }}">Выйти</a></li>
+                {% else %}
+                    <li class="{% if request.path == sign_in_url %}active{% endif %}"><a href="{% url 'sign-in' %}">Войти</a></li>
+                {% endif %}
             </ul>
         </div>
         <div class="menu_phone d-flex flex-row align-items-center justify-content-start">
