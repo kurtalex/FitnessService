@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 
-from runfit.forms import UserForm, UserFormForEdit, PersonForm
+from runfit.forms import UserForm, UserFormForEdit, PersonForm, OrderForm
 from runfit.models import Order
 
 
@@ -58,4 +58,15 @@ def sign_up(request):
 
 @login_required(login_url='/sign-in/')
 def order(request):
-    return render(request, 'order.html')
+    order_form = OrderForm
+    if request.method == "POST":
+        order_form = OrderForm(request.POST)
+
+        if order_form.is_valid():
+            new_order = order_form.save(commit=False)
+            new_order.save()
+            return redirect(home)
+
+    return render(request, 'order.html', {
+        "order_form": order_form,
+    })

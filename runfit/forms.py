@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.models import User
-from runfit.models import Person, Coach
+from runfit.models import Person, Coach, Order
 
 
 class UserForm(forms.ModelForm):
@@ -24,3 +24,9 @@ class PersonForm(forms.ModelForm):
     class Meta:
         model = Person
         fields = ("phone", "avatar")
+
+
+class OrderForm(forms.ModelForm):
+    class Meta:
+        model = Order
+        fields = ("person", "coach", "pick_training", "total")
