@@ -668,9 +668,9 @@ section {
 {
 	position: absolute;
 	left: 0;
-	bottom: -270px;
+	bottom: -350px;
 	width: 120%;
-	height: 270px;
+	height: 350px;
 	background: #FFFFFF;
 	transform-origin: top left;
 	transform: rotate(-8deg);

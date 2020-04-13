@@ -375,10 +375,10 @@
 .blog_overlay
 {
 	position: absolute;
-	top: -270px;
+	top: -350px;
 	right: 0;
 	width: 130%;
-	height: 270px;
+	height: 350px;
 	transform-origin: bottom right;
 	-webkit-transform: rotate(-8deg);
 	-moz-transform: rotate(-8deg);

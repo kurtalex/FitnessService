@@ -29,4 +29,4 @@ class PersonForm(forms.ModelForm):
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
-        fields = ("person", "coach", "pick_training", "total")
+        fields = ("coach", "pick_training", "total")

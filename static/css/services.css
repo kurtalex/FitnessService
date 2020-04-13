@@ -63,11 +63,11 @@
 .tt_overlay
 {
 	position: absolute;
-	top: -270px;
+	top: -350px;
 	right: 0;
 	transform-origin: right bottom;
 	width: 130%;
-	height: 270px;
+	height: 350px;
 	background: #FFFFFF;
 	transform: rotate(-8deg);
 }
