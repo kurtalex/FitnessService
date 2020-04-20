@@ -67,8 +67,8 @@ class TrainingSchedule(models.Model):
     start_at = models.DateTimeField()
 
     class Meta:
-        verbose_name = "Рассписание"
-        verbose_name_plural = "Рассписание"
+        verbose_name = "Расписание"
+        verbose_name_plural = "Расписание"
 
     def __str__(self):
         return str(self.id)
