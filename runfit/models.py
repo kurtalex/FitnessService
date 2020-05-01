@@ -47,10 +47,10 @@ class TypeOfTraining(models.Model):
 
 
 class Order(models.Model):
-    person = models.ForeignKey(Person, on_delete=models.CASCADE)
-    coach = models.ForeignKey(Coach, on_delete=models.CASCADE)
-    pick_training = models.ForeignKey(TypeOfTraining, on_delete=models.CASCADE)
-    total = models.IntegerField()
+    person = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    coach = models.ForeignKey(Coach, on_delete=models.CASCADE, verbose_name="Тренер")
+    pick_training = models.ForeignKey(TypeOfTraining, on_delete=models.CASCADE, verbose_name="Тип занятия")
+    total = models.FloatField(default=1000, verbose_name="Цена")
     created_at = models.DateTimeField(default=timezone.now)
 
     class Meta:

@@ -1,12 +1,27 @@
 {% extends 'base.html' %}
+{% load bootstrap4 %}
 {% block title %}Заказ|Fitrun{% endblock %}
 {% block content %}
     <div class="sign_in">
         <div class="sign_in_container">
             <div class="row">
                 <div class="col">
-                    <div class="text-center">
-                        Сообщение для зарегистрированных пользователей
+                    <div class="col-lg-6 offset-lg-3 col-md-6 offset-md-3">
+                        <div class="card mb-3 card-body">
+                            <div class="card-body">
+                                <h3 class="text-center text-uppercase"><b>Офрмление услуги</b></h3>
+                                <form method="POST" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                    <label for="">
+                                        Услуга будет оформлена для пользователя,
+                                        {{ user.get_full_name }}
+                                    </label>
+
+                                    {% bootstrap_form order_form %}
+                                    <button type="submit" class="btn sign_button pull-right">Завешить офрмление</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
